@@ -21,17 +21,25 @@ def check_web(team):
         if verbose:
             print "web server checks out"
         success = 1
-
     else:
         success = 0
 
     s.close
 
+def check_ftp(team):
+    ftp_url - 'ftp.' + team + '.ctf'
+    s = socket.socket()
+    s.connect((ftp_url, 21))
+
+
+    
+
+
 def main():
     
     teams = ['team1', 'team2', 'team3', 'team4', 'team5']
     for team in teams:
-        
+        result = check_web(team)
 
 
 if __name__ == "__main__":
